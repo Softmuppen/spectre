@@ -1,0 +1,20 @@
+<div>
+	<div class="col-sm-3">
+		<div class="row">
+			<h3 class="text-center" style="font-family: 'Pacifico', cursive;">Spectre</h3>
+		</div>
+		<br>
+		<div class="row">
+			<ul class="list-group" style="padding: 10px">
+				<div class="list-group">
+					<div ng-repeat="module in moduleList">
+						<a href="#" class="list-group-item {{getModuleStatus(module)}}" ng-click="setActiveModule(module)">{{module.description}}</a>
+					</div>
+				</div>
+			</ul>
+		</div>
+	</div>
+	<div class="col-sm-9">
+		<ng-include src="activeModule.template"></ng-include>
+	</div>
+</div>

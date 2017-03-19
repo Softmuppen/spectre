@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="spectreApp" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Spectre</title>
+
+		<!-- Bootstrap -->
+		<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	
+		<!-- Bootswatch -->
+		<link href="https://bootswatch.com/cyborg/bootstrap.min.css" rel="stylesheet">
+		<!<link href="https://bootswatch.com/cosmo/bootstrap.min.css" rel="stylesheet">
+		<!<link href="https://bootswatch.com/cerulean/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Other CSS -->
+		<link rel="stylesheet" href="css/scrollbar.css" >
+
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Sintony" rel="stylesheet">  
+		<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+		<!-- JQuery -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	</head>
+	
+	<body>
+
+		<div id="mainContainer" class="container-fluid text-left">
+			<div>
+				<div class="row">
+					<div ng-controller="ModuleViewerController">
+						<div ng-include="moduleViewerTemplate"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- AngularJs -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+		<script src="modules/nearby-stop/nearbyStopController.js"></script>
+		<script src="modules/settings/settings.js"></script>
+		<script src="modules/module-viewer/moduleViewer.js"></script>
+		<script src="app.js"></script>
+
+	</body>
+</html>
+

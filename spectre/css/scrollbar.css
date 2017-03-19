@@ -1,0 +1,8 @@
+.scroll {
+  height: 300px;
+  overflow: auto;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 10px;
+}

@@ -1,0 +1,40 @@
+<div class="ng-cloak" ng-controller="NearbyStopController">
+	<div class="row">
+		<div class="col-sm-12">
+			<h3 class="text-center" style="font-family: 'Pacifico', cursive;">Traffic Information 2</h3>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="btn-toolbar" role="toolbar" aria-label="...">
+				<div class="btn-group btn-group-justified" role="group" aria-label="...">
+					<div ng-repeat="stop in nearbyStopList" class="btn-group" role="group">									
+						<button type="button" class="btn btn-{{getStopStatusClass(stop)}}" ng-click="setActiveStop(stop.name)">
+							{{stop.name.split(',')[0]}}
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="scroll scrollbar">				
+				<ul class="list-group" >
+					<li class="list-group-item" ng-repeat="departure in activeStopDepartureList">
+						<table style="width:100%">
+							<tr>
+								<th style="background-color: {{departure.fgColor}}; width: 7px;"></th>
+								<th style="padding: 10px; width: 50px;"><h6>{{departure.sname}}</h6></th>
+								<th style="text-align: left"><h6>{{departure.direction}}</h6></th>
+								<th style="padding: 10px; width: 100px;"><h6>{{getMinutesUntilDeparture(departure)}} min</h6></th>
+							</tr>
+						</table>
+					</li>
+				</ul>
+			</div>				
+		</div>
+	</div>
+</div>
